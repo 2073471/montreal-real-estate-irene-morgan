@@ -1,0 +1,109 @@
+<?php
+if ( !defined( 'ABSPATH' ) )
+exit;
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <?php // add font code here ?>
+    <?php wp_head(); ?>
+
+     <?php wp_head(); ?>
+
+
+
+
+ <?php wp_head(); ?>
+
+ <?php // add font code here ?>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<div class='align-right'>
+   <button class='hide-text'>Menu</button>
+</div>
+
+<header>
+<div class='branding'>
+    <?php
+    if ( function_exists( 'the_custom_logo' ) ) {
+        the_custom_logo();
+    }
+    ?>
+
+    <div class="siteinfo">
+        <a href='<?php echo esc_url(home_url()); ?>'>
+        <?php bloginfo( 'name' );
+        ?>
+        </a>
+       
+
+        <div class='description'>
+        <?php bloginfo( 'description' );
+        ?>
+        </div> 
+    </div>
+</div>
+
+<?php get_search_form(); ?>
+</header>
+
+
+<nav class="primary-nav">
+<?php
+wp_nav_menu( array(
+'menu_class'	  	=> 'primary-menu',  // adds: class = 'primary-menu'
+'theme_location' 	=> 'header-menu',   // is controlled as the 'header menu' in the backend
+'menu_id'	    	=> 'menu',          // adds: id = 'menu'
+'container'         => 'div',           // menu is inside a div class="menu-header-container"
+) );
+?>
+</nav>
+
+body {
+        line-height: 1.5;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        line-height: 1.3; /* default line-height for all titles and subtitles */
+    }
+
+    h1 {
+        margin: 2em 0 1em 0;
+        line-height: 1.2;  /* override the default line-height */
+        }
+
+    h2 {margin: 2em 0 1em 0}
+
+    h3 {margin: 2em 0 1em 0}
+
+    h4 {margin: 2em 0 1em 0}
+
+    h5 {margin: 2em 0 1em 0}
+
+    h6 {margin: 2em 0 1em 0}
+
+    p {margin: 0 0 1em 0}
+
+    h2 + ol {
+        margin: 2rem 0 0 2rem 0;
+        }
+
+    h2 + table {
+        margin: 0.5rem 0 0 2rem 0;
+    } 
+
+    h2 + h3 {
+        margin: 0.25rem 0 0 2rem 0;
+    }       
+
+    h2:has(+ p) {
+        font-size: 2.498em;
+        margin: 0;
+    }

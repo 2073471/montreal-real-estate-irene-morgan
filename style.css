@@ -65,7 +65,9 @@
     5.5 Repeat the steps 5.1 - 5.3 for adding a third column if necessary. 
 
 */
-
+@import url(css/mobile-nav.css);
+@import url(css/desktop-nav.css);
+@import url(css/contact.css);
 
 /* COLOR PALETTE & FONTS VARIABLES  */
 
